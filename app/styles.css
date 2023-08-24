@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #111, #333);
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    text-align: center;
+    width: 90vw;
+    height: 100vh;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+  }
+  
+  .ice-button {
+    background-color: transparent;
+    border: none;
+    padding: 1.5vh 3vw;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 1.5vw;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .ice-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(1vw);
+    opacity: 0.2;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1;
+  }
+  
+  .ice-button:hover::before {
+    opacity: 1;
+  }
+
+  #pause-icon {
+    display: none;
+  }
+
+  .button-icon {
+    width: 20px; /* Ajustez la largeur à votre convenance */
+    height: 20px; /* Ajustez la hauteur à votre convenance */
+  }
+
+  .control-container {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 16vh;
+    left: 0;
+  }
+
+  .progress-timer-container {    
+    position: absolute;
+    bottom: 0;
+    left: 25vw;
+    width: 50vw;
+    align-items: center;    
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: 20px; /* Espace entre les boutons et la barre de progression/timer */
+    margin-bottom: 20px; /* Espace entre la barre de progression/timer et le titre */;
+  }
+  
+  .progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: rgba(0, 190, 255, 1);
+  }
+
+  .timer-display-container {
+    /*posotionner le container en base de la page*/
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .timer-display {
+    font-size: 1.5vw;
+    color: #fff;
+  }
+
+  .image-container {
+    position: absolute;
+    bottom: 1vh;
+    left: 1vw;
+    height: 12vh;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .music-title-container {
+    position: absolute;
+    bottom: 1vh;
+    left: 8vw;
+    height: 12vh;
+    width: 16vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+  }
+
+  .music-title {
+    font-size: 1.5vw;
+    color: #fff;
+  }
+
+  .volume-container {
+    position: absolute;
+    bottom: 1vh;
+    right: 1vw;
+    height: 12vh;
+    width: 16vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .volume-slider {
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+  }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<title>Fenekot Player</title>
+</head>
+<body>
+
+<div class="container">
+  <div class="buttons">
+    <button class="ice-button" data-sound="sounds/cupid.mp3">Cupid</button>
+    <button class="ice-button" data-sound="sounds/fenekot.mp3">Fenekot</button>
+  </div>
+  <div class="control-container">
+    <hr>
+    <div class="timer-display-container">
+      <button class="ice-button" id="play-button">
+        <img src="icons/play.png" alt="Play" class="button-icon" id="play-icon">
+        <img src="icons/pause.png" alt="Pause" class="button-icon" id="pause-icon">
+      </button>
+      <div class="timer-display">00:00 / 00:00</div>
+      <button class="ice-button" id="stop-button">
+        <img src="icons/stop.png" alt="Stop" class="button-icon" id="stop-icon">
+      </button>
+    </div>
+
+    <div class="image-container">
+      <img src="images/cupid.jpg">
+    </div>
+
+    <div class="music-title-container">
+      <div class="music-title">Cupid - Fifty Fifty</div>
+    </div>
+
+    <div class="progress-timer-container">
+      <div class="progress-bar"></div>
+    </div>
+
+    <div class="volume-container">
+      <div class="volume-icon">
+        <img src="icons/sound.png">
+      </div>
+      <input type="range" class="volume-slider" min="0" max="1" step="0.001" value="1">
+    </div>
+
+  </div>
+</div>
+</body>
+
+<script src="script.js"></script>
+
+</html>
